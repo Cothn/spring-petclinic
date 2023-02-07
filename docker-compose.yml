@@ -4,7 +4,7 @@ services:
   mysql:
     image: mysql:5.7
     ports:
-      - "3306:3306"
+      - "3307:3307"
     environment:
       - MYSQL_ROOT_PASSWORD=
       - MYSQL_ALLOW_EMPTY_PASSWORD=true
@@ -21,8 +21,3 @@ services:
       - POSTGRES_PASSWORD=petclinic
       - POSTGRES_USER=petclinic
       - POSTGRES_DB=petclinic
-  server:
-    build: ./
-    command: ./mvnw spring-boot:run
-    ports:
-  - "1234:1234"
